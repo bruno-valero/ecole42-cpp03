@@ -6,23 +6,23 @@
 /*   By: bruno-valero <bruno-valero@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 19:14:14 by brunofer          #+#    #+#             */
-/*   Updated: 2026/02/28 10:52:37 by bruno-valer      ###   ########.fr       */
+/*   Updated: 2026/02/28 12:41:57 by bruno-valer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(void) {
-	setHitPoints(100);
-	setEnergyPoints(50);
-	setAttackDamage(20);
+	setHitPoints(ScavTrap::_defaultHitPoints);
+	setEnergyPoints(ScavTrap::_defaultEnergyPoints);
+	setAttackDamage(ScavTrap::_defaultAttackDamage);
 	std::cout << "ScavTrap::DefaultConstructor()" << std::endl;
 };
 
 ScavTrap::ScavTrap(const std::string &name): ClapTrap(name) {
-	setHitPoints(100);
-	setEnergyPoints(50);
-	setAttackDamage(20);
+	setHitPoints(ScavTrap::_defaultHitPoints);
+	setEnergyPoints(ScavTrap::_defaultEnergyPoints);
+	setAttackDamage(ScavTrap::_defaultAttackDamage);
 	std::cout << "ScavTrap::NameConstructor(" << getName() << ")" << std::endl;
 };
 

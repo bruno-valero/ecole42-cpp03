@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bruno-valero <bruno-valero@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 19:03:02 by brunofer          #+#    #+#             */
-/*   Updated: 2026/02/28 10:46:14 by bruno-valer      ###   ########.fr       */
+/*   Updated: 2026/02/28 12:44:56 by bruno-valer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
 # include "ClapTrap.hpp"
 
-class  ScavTrap: public ClapTrap
+class  FragTrap: virtual public ClapTrap
 {
-private:
+protected:
+	static const unsigned int _defaultHitPoints = 100;
+	static const unsigned int _defaultEnergyPoints = 100;
+	static const unsigned int _defaultAttackDamage = 30;
 
 public:
-	ScavTrap();
-	ScavTrap(const std::string &name);
-	ScavTrap(const ScavTrap &other);
-	~ScavTrap(void);
-	ScavTrap	&operator=(const ScavTrap &other);
-	void		guardGate(void) const;
+	FragTrap();
+	FragTrap(const std::string &name);
+	FragTrap(const FragTrap &other);
+	~FragTrap(void);
+	FragTrap	&operator=(const FragTrap &other);
+	void		highFivesGuys(void) const;
 	void		attack( const std::string &target );
 };
 

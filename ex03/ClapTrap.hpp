@@ -6,7 +6,7 @@
 /*   By: bruno-valero <bruno-valero@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 23:20:11 by bruno-valer       #+#    #+#             */
-/*   Updated: 2026/02/28 10:30:48 by bruno-valer      ###   ########.fr       */
+/*   Updated: 2026/02/28 11:52:04 by bruno-valer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class ClapTrap
 {
-private:
+protected:
 	std::string		_name;
 	unsigned int	_hit_points;
 	unsigned int	_energy_points;

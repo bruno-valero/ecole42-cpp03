@@ -6,7 +6,7 @@
 /*   By: bruno-valero <bruno-valero@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 19:03:02 by brunofer          #+#    #+#             */
-/*   Updated: 2026/02/28 10:46:14 by bruno-valer      ###   ########.fr       */
+/*   Updated: 2026/02/28 12:41:09 by bruno-valer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,12 @@
 
 # include "ClapTrap.hpp"
 
-class  ScavTrap: public ClapTrap
+class  ScavTrap: virtual public ClapTrap
 {
-private:
+protected:
+	static const unsigned int _defaultHitPoints = 100;
+	static const unsigned int _defaultEnergyPoints = 50;
+	static const unsigned int _defaultAttackDamage = 20;
 
 public:
 	ScavTrap();
